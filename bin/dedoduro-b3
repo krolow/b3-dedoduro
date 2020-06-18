@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+const start = require('../src');
+
+const username = process.env.CPF;
+const password = process.env.PASSWORD;
+const year     = process.env.YEAR || new Date().getYear() - 1;
+const debug    = !!process.env.DEBUG;
+
+start({ username, password, year, debug });
